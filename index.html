@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>JS to find area of circle</title>
+        <!-- HTML5 shim for IE8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src=“https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js”></script>
+    <![endif]-->
+<!-- javascipt starts here -->
+<script type="text/javascript">
+//giving name to a function
+function myFunc(){
+	//input from the text box
+var inp=Number(document.getElementById("inputNumber").value);
+
+
+if (isNaN(inp))
+{
+document.getElementById("output").innerHTML="Only Numbers are allowed";
+}
+else
+{
+document.getElementById("output").innerHTML="Area of the Circle is : "+areaOfCircle(inp);
+}
+//internal funtion to find area of the circle
+function areaOfCircle(num)
+{
+return num*num;
+}
+}
+<!-- javascript ends here -->
+</script>
+</head>
+<body>
+<!-- Header -->
+<header>
+<h1> Area of Circle </h1>
+</header>
+<!-- main section -->
+<main id="mainSection">
+<section id="subSection">
+<!-- text box to pass the input to the sript on submit -->
+<label> <b> Please enter a number to find its area </b></label> <input type="text" id="inputNumber" name="userinput" pattern="[0-9]" required title="Only numbers are allowed">
+<input type=submit value="submit" onclick="myFunc()">
+<p id="output"></p>
+</section>
+</main>
+</body>
+</html>
